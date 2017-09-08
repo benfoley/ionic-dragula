@@ -128,7 +128,7 @@ export class HomePage {
 ```
 
 
-And add Dragula's styles.
+Add Dragula's styles.
 
 `src/app/app.scss`
 ```scss
@@ -156,6 +156,20 @@ And add Dragula's styles.
   filter: alpha(opacity=20);
 }
 ```
+
+And add some styles so you can see the target!
+
+`page/home/home.scss`
+```scss
+page-home {
+  ion-list {
+    min-height: 100px;
+    padding-bottom: 50px;
+    background-color: yellow;
+  }
+}
+```
+
 
 I think that's it.. have I missed anything?
 
