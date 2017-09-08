@@ -11,4 +11,25 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+    <ion-row>
+    <ion-col width-50 class="left">
+      <div class="header">First Bucket</div>
+      <ion-list [dragula]='"bag"' [dragulaModel]="q1">
+        <button ion-item *ngFor="let item of q1">
+          {{item}}
+        </button>
+      </ion-list>
+    </ion-col>
+
+    <ion-col width-50 class="right">
+      <div class="header">Second Bucket</div>
+      <ion-list [dragula]='"bag"' [dragulaModel]="q2">
+        <div ion-item *ngFor="let item of q2">
+          {{item}}
+        </div>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
 </ion-content>

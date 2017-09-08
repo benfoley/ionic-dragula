@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-
+import { DragulaModule, DragulaService } from "ng2-dragula/ng2-dragula"
 
 
 @NgModule({
@@ -14,6 +14,7 @@ import { MyApp } from './app.component';
   ],
   imports: [
     BrowserModule,
+    DragulaModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -23,6 +24,7 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    DragulaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
