@@ -22,9 +22,16 @@ export class HomePage {
       this.q1.push("1...." + i )
     }
 
+
     dragulaService.drop.subscribe((value) => {
       console.log(value)
     });
+
+    // this is to prevent 'bag already exists error'
+    // https://github.com/valor-software/ng2-dragula/issues/442
+    const bag: any = this.dragulaService.find('bag');
+    if (bag !== undefined ) this.dragulaService.destroy('bag');
+
     dragulaService.setOptions('bag', {
       resetOnSpill: true
     });
