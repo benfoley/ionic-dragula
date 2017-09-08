@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { DragulaModule } from '../../node_modules/ng2-dragula/ng2-dragula'
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -14,6 +17,7 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    DragulaModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
